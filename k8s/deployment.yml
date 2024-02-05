@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: youtube_app
+  name: project
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: youtube_app
+      app: project
   template:
     metadata:
       labels:
-        app: youtube_app
+        app: project
     spec:
       containers:
-      - name: youtube_app
-        image: mrubel/youtube_app:latest
+      - name: project
+        image: rameshkumarverma/project:latest
         ports:
         - containerPort: 3000
