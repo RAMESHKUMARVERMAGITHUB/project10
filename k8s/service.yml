@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: youtube_app
+  name: project
 spec:
   selector:
-    app: youtube_app
+    app: project
   ports:
     - protocol: TCP
       port: 80
