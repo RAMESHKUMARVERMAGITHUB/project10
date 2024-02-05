@@ -62,7 +62,7 @@ pipeline {
         stage('Deploy to Kubernets'){
             steps{
                 script{
-                    dir('K8s') {
+                    dir('k8s') {
                       withKubeConfig(caCertificate: '', clusterName: '', contextName: '', credentialsId: 'k8s', namespace: '', restrictKubeConfigAccess: false, serverUrl: '') {
                       sh 'kubectl delete --all pods'
                       sh 'kubectl apply -f deployment.yml'
